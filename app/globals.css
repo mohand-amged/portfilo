@@ -1,0 +1,206 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Railway:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Railway:wght@300&display=swap");
+
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Theme */
+:root {
+  /* COLORS */
+  --color-bg-main: #0b0c10; /* Background Dark */
+  --color-grid-line: #1f2937; /* Grid lines */
+  --color-text-main: #ffffff; /* Main text (White) */
+  --color-text-secondary: #94a3af; /* Secondary text (Silver-Blue) */
+
+  --color-btn-primary: #a3e635; /* Lime Green Button */
+  --color-btn-secondary: #818cf8; /* Indigo Button */
+  --color-tag: #f472b6; /* Pink Tag/Badge */
+  --color-icon: #22d3ee; /* Aqua for Icons/Emojis */
+  --color-hover-glow: #67e8f9; /* Bright Aqua for Hover Effects */
+  --color-divider: #2f343c; /* Divider/Border Color */
+
+  /* FONTS */
+  --font-pixel: "Press Start 2P", monospace;
+  --font-primary: "Railway", sans-serif;
+  --font-secondary: "Railway", sans-serif;
+}
+
+/* Extend Tailwind's default theme */
+@layer base {
+  .bg-main {
+    background-color: var(--color-bg-main);
+  }
+  .grid-line {
+    color: var(--color-grid-line);
+  }
+  .text-main {
+    color: var(--color-text-main);
+  }
+  .text-secondary {
+    color: var(--color-text-secondary);
+  }
+  .btn-primary {
+    background-color: var(--color-btn-primary);
+  }
+  .btn-secondary {
+    background-color: var(--color-btn-secondary);
+  }
+  .tag-pink {
+    background-color: var(--color-tag);
+  }
+  .icon-aqua {
+    color: var(--color-icon);
+  }
+  .hover-glow {
+    box-shadow: 0 0 10px var(--color-hover-glow);
+  }
+  .divider {
+    border-color: var(--color-divider);
+  }
+
+  /* Fonts */
+  .font-pixel {
+    font-family: var(--font-pixel);
+  }
+  .font-primary {
+    font-family: var(--font-primary);
+    font-weight: 700; /* Bold */
+  }
+  .font-secondary {
+    font-family: var(--font-secondary);
+    font-weight: 500; /* Light */
+  }
+}
+@theme inline {
+  --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
+}
+
+@keyframes spotlight {
+  0% {
+    opacity: 0;
+    transform: translate(-72%, -62%) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -40%) scale(1);
+  }
+}
+
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animate-infinite-scroll {
+  display: flex;
+  animation: infinite-scroll 7s linear infinite;
+  will-change: transform; /* Optimizes GPU rendering */
+}
+.animate-infinite-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* body base styles */
+body {
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+  font-family: var(--font-primary);
+}
+
+/* Custom Scrollbar Styles */
+.custom-scrollbar {
+  --scrollbar-track-color: rgba(255, 255, 255, 0.05);
+  --scrollbar-thumb-color: linear-gradient(
+    to bottom,
+    #a855f7,
+    #d946ef,
+    #818cf8,
+    #3b82f6
+  );
+  --scrollbar-size: 10px;
+  --scrollbar-thumb-width: 6px;
+}
+
+.simplebar-track.simplebar-vertical {
+  width: var(--scrollbar-size) !important;
+  background: var(--scrollbar-track-color) !important;
+  backdrop-filter: blur(4px) !important;
+  border-radius: 4px !important;
+  right: 2px;
+}
+
+.simplebar-scrollbar::before {
+  background: var(--scrollbar-thumb-color) !important;
+  opacity: 0.8 !important;
+  border-radius: 4px !important;
+  width: var(--scrollbar-thumb-width) !important;
+  left: calc(
+    (var(--scrollbar-size) - var(--scrollbar-thumb-width)) / 2
+  ) !important;
+}
+
+.simplebar-scrollbar.simplebar-visible::before {
+  opacity: 1 !important;
+}
+
+/* Horizontal scrollbar styles */
+.simplebar-track.simplebar-horizontal {
+  height: var(--scrollbar-size) !important;
+  background: var(--scrollbar-track-color) !important;
+  backdrop-filter: blur(4px) !important;
+  border-radius: 4px !important;
+  bottom: 2px;
+}
+
+.simplebar-scrollbar.simplebar-horizontal::before {
+  background: linear-gradient(
+    to right,
+    #60a5fa,
+    #38bdf8,
+    #15bdb0,
+    #00c664
+  ) !important;
+  height: var(--scrollbar-thumb-width) !important;
+  top: calc(
+    (var(--scrollbar-size) - var(--scrollbar-thumb-width)) / 2
+  ) !important;
+}
+/* Skills Animation section */
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(calc(-50%));
+  }
+}
+
+@keyframes scroll-reverse {
+  0% {
+    transform: translateY(calc(-50%));
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 50s linear infinite; /* Slowed down significantly */
+}
+
+.animate-scroll-reverse {
+  animation: scroll-reverse 50s linear infinite; /* Slowed down significantly */
+}
+
+.animate-scroll:hover,
+.animate-scroll-reverse:hover {
+  animation-play-state: paused;
+}
