@@ -16,7 +16,14 @@ export const Projectstestimonials: Testimonial[] = [
     image: "/ProjectImages/2.png",
     link: "https://github.com/mohand-amged/PFM",
     demo : "https://personal-financial-m.vercel.app/"
-  }
+  },
+  {
+    quote:
+      "An event management platform built with Next.js and Tailwind CSS. EventSphere helps users create, organize, and track events seamlessly, featuring a modern design and intuitive user experience.",
+    name: "Personal Finance App",
+    image: "/ProjectImages/7.png",
+    link: "https://github.com/mohand-amged/Event-sphere",
+  },
 ];
 
 export const Documentationstimonials: Testimonial[] = [
