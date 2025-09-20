@@ -20,7 +20,7 @@ export const Projectstestimonials: Testimonial[] = [
   {
     quote:
       "An event management platform built with Next.js and Tailwind CSS. EventSphere helps users create, organize, and track events seamlessly, featuring a modern design and intuitive user experience.",
-    name: "Personal Finance App",
+    name: "EventSphere",
     image: "/ProjectImages/7.png",
     link: "https://github.com/mohand-amged/Event-sphere",
   },
