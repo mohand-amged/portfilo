@@ -3,11 +3,11 @@ import { Testimonial } from "@/types";
 export const Projectstestimonials: Testimonial[] = [
   {
     quote:
-      "A Games Hub built with Next.js, Tailwind CSS, and Framer Motion. This was my first complete frontend project, created with help from a YouTube tutorial to kickstart my journey into frontend development.",
-    name: "Next.JS Games Hub",
-    image: "/ProjectImages/1.png",
-    link: "https://github.com/mohand-amged/Gaming-platform",
-    demo: "https://gaming-platform-ten.vercel.app/",
+      "A responsive landing page for an eye care service built with Next.js and Tailwind CSS. The design is modern and user-friendly, featuring smooth animations and a clean layout to effectively showcase the services offered.",
+    name: "EyeCare Landing Page",
+    image: "/ProjectImages/4.png",
+    link: "https://github.com/mohand-amged/I-Clinic",
+    demo : "https://i-clinic-orpin.vercel.app/"
   },
   {
     quote:
