@@ -18,9 +18,8 @@ const MyWork = () => {
       <div>
         <Tabs defaultValue="Projects" className="w-full">
           <div className="flex items-center justify-center">
-            <TabsList className="grid grid-cols-2 max-w-lg w-full items-center justify-center">
+            <TabsList className="grid grid-cols-1 max-w-lg w-full items-center justify-center">
               <TabsTrigger value="Projects">Projects</TabsTrigger>
-              <TabsTrigger value="Documentations">Documentations</TabsTrigger>
             </TabsList>
           </div>
 
@@ -30,12 +29,6 @@ const MyWork = () => {
                 {/*  projects */}
                 <WorkTestimonials testimonials={Projectstestimonials} />
               </TabsContent>
-              {/*
-              <TabsContent value="Documentations">
-                 Documentations 
-                <WorkTestimonials testimonials={Documentationstimonials} />
-              </TabsContent>
-              */}
             </div>
           </div>
         </Tabs>
