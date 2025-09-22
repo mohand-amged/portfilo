@@ -1,15 +1,7 @@
 import { Testimonial } from "@/types";
 
 export const Projectstestimonials: Testimonial[] = [
-  {
-    quote:
-      "A responsive landing page for an eye care service built with Next.js and Tailwind CSS. The design is modern and user-friendly, featuring smooth animations and a clean layout to effectively showcase the services offered.",
-    name: "EyeCare Landing Page",
-    image: "/ProjectImages/4.png",
-    link: "https://github.com/mohand-amged/I-Clinic",
-    demo : "https://i-clinic-orpin.vercel.app/"
-  },
-  {
+    {
     quote:
       "A Personal finance management app built with Next.js, Tailwind CSS. This project was created to help users manage their finances effectively, featuring a sleek design and smooth animations.",
     name: "Personal Finance App",
@@ -19,10 +11,11 @@ export const Projectstestimonials: Testimonial[] = [
   },
   {
     quote:
-      "An event management platform built with React.js, Tailwind CSS, and Express.js , mongodb . EventSphere helps users create, organize, and track events seamlessly, featuring a modern design and intuitive user experience.",
-    name: "EventSphere",
-    image: "/ProjectImages/7.png",
-    link: "https://github.com/mohand-amged/Event-sphere",
+      "A responsive landing page for an eye care service built with Next.js and Tailwind CSS. The design is modern and user-friendly, featuring smooth animations and a clean layout to effectively showcase the services offered.",
+    name: "EyeCare Landing Page",
+    image: "/ProjectImages/4.png",
+    link: "https://github.com/mohand-amged/I-Clinic",
+    demo : "https://i-clinic-orpin.vercel.app/"
   },
 ];
 
